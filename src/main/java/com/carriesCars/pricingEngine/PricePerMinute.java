@@ -15,6 +15,21 @@ final class PricePerMinute {
 
     private Money pricePerMinute;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        PricePerMinute that = (PricePerMinute) o;
+
+        return pricePerMinute.equals(that.pricePerMinute);
+    }
+
+    @Override
+    public int hashCode() {
+        return pricePerMinute.hashCode();
+    }
+
     public PricePerMinute(Money pricePerMinute) {
         this.pricePerMinute = pricePerMinute;
     }
