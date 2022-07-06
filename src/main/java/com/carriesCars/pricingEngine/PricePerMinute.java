@@ -5,12 +5,14 @@ import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 
 final class PricePerMinute {
+    public static final double AMSTERDAM_RATE = 0.24;
+
     public Money calculateMinutePrice(@NotNull Duration someDuration) {
         return pricePerMinute.multipliedBy(someDuration.durationInMinutes());
     }
 
     public static PricePerMinute inAmsterdam() {
-        return new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));
+        return new PricePerMinute(Money.of(CurrencyUnit.EUR, AMSTERDAM_RATE));
     }
 
     // Boring code below
