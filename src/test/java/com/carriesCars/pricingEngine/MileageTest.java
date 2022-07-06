@@ -10,7 +10,8 @@ public class MileageTest {
     @ParameterizedTest(name = "mileage=''{0}'' (example no. {index})")
     @ValueSource(
         ints = {
-            250
+            250,
+            1
         }
     )
     public void One_Mileage_is_identical_to_another_Mileage_if_they_have_an_identical_value(int aMileage) {
