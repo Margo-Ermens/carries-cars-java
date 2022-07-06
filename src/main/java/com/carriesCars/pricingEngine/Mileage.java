@@ -7,6 +7,11 @@ class Mileage {
         this.mileage = mileage;
     }
 
+    public Mileage increaseWith(int increaseWith)
+    {
+        return null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

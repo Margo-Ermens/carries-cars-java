@@ -1,8 +1,10 @@
 package com.carriesCars.pricingEngine;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MileageTest {
@@ -19,5 +21,16 @@ public class MileageTest {
         Mileage anotherIdenticalMileage = new Mileage(aMileage);
 
         assertEquals(someMileage, anotherIdenticalMileage);
+    }
+
+    @Test
+    public void Mileage_can_be_increased() {
+        Mileage someMileage = new Mileage(25);
+        Mileage increasedMileage = someMileage.increaseWith(10);
+
+        assertAll("Mileage#increaseWith does not modify the original Mileage",
+                () -> assertEquals(new Mileage(25), someMileage),
+                () -> assertEquals(new Mileage(35), increasedMileage)
+        );
     }
 }
