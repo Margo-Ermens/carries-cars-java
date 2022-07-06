@@ -2,7 +2,7 @@ package com.carriesCars.pricingEngine;
 
 import org.joda.money.Money;
 
-class PricePerMinute {
+final class PricePerMinute {
     private Money pricePerMinute;
 
     public PricePerMinute(Money pricePerMinute) {
