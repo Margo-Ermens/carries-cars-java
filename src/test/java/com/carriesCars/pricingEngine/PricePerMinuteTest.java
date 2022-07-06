@@ -25,4 +25,12 @@ public class PricePerMinuteTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void Two_prices_are_identical_if_the_rate_is_identical() {
+        PricePerMinute pricePerMinute = new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));;
+        PricePerMinute identicalPricePerMinute = new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));
+
+        assertEquals(pricePerMinute, identicalPricePerMinute);
+    }
 }
