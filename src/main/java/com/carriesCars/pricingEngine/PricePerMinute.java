@@ -1,10 +1,11 @@
 package com.carriesCars.pricingEngine;
 
+import org.jetbrains.annotations.NotNull;
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 
 final class PricePerMinute {
-    public Money calculateMinutePrice(Duration someDuration) {
+    public Money calculateMinutePrice(@NotNull Duration someDuration) {
         return pricePerMinute.multipliedBy(someDuration.durationInMinutes());
     }
 
@@ -31,7 +32,7 @@ final class PricePerMinute {
         return pricePerMinute.hashCode();
     }
 
-    public PricePerMinute(Money pricePerMinute) {
+    public PricePerMinute(@NotNull Money pricePerMinute) {
         this.pricePerMinute = pricePerMinute;
     }
 }
