@@ -1,5 +1,6 @@
 package com.carriesCars.pricingEngine;
 
+import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
 
 final class PricePerMinute {
@@ -8,7 +9,7 @@ final class PricePerMinute {
     }
 
     public static PricePerMinute inAmsterdam() {
-        return null;
+        return new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));
     }
 
     // Boring code below
