@@ -20,4 +20,16 @@ public class PricingEngineTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void CalculatePrice_charged_per_minute_V2() {
+        PricingEngine pricingEngine = new PricingEngine();
+
+        Duration duration = Duration.ofMinutes(1);
+        PricePerMinute pricePerMinute = new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.30));
+        Money actual = pricingEngine.calculatePriceV2(duration, pricePerMinute);
+
+        Money expected = Money.of(CurrencyUnit.EUR, 0.30);
+        assertEquals(expected, actual);
+    }
+
 }
