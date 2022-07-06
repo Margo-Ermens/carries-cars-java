@@ -19,11 +19,14 @@ public class PricePerMinuteTest {
     }
 
     private class PricePerMinute {
+        private Money pricePerMinute;
+
         public PricePerMinute(Money pricePerMinute) {
+            this.pricePerMinute = pricePerMinute;
         }
 
         public Money calculateMinutePrice(Duration someDuration) {
-            return null;
+            return pricePerMinute.multipliedBy(someDuration.durationInMinutes());
         }
     }
 }
