@@ -18,4 +18,11 @@ public class PricePerMinuteTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void In_Amsterdam_is_24_eurocent() {
+        PricePerMinute actual = PricePerMinute.inAmsterdam();
+        PricePerMinute expected = new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));
+
+        assertEquals(expected, actual);
+    }
 }

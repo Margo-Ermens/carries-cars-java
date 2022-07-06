@@ -7,6 +7,10 @@ final class PricePerMinute {
         return pricePerMinute.multipliedBy(someDuration.durationInMinutes());
     }
 
+    public static PricePerMinute inAmsterdam() {
+        return null;
+    }
+
     // Boring code below
 
     private Money pricePerMinute;
