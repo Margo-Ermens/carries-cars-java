@@ -25,7 +25,7 @@ public class PricingEngineTest {
         PricingEngine pricingEngine = new PricingEngine();
 
         Duration duration = Duration.ofMinutes(1);
-        PricePerMinute pricePerMinute = new PricePerMinute(Money.of(CurrencyUnit.EUR, 0.24));
+        PricePerMinute pricePerMinute = PricePerMinute.inAmsterdam();
         Money actual = pricingEngine.calculatePriceV2(duration, pricePerMinute);
 
         Money expected = Money.of(CurrencyUnit.EUR, 0.24);
