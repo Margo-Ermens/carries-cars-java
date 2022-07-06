@@ -1,6 +1,6 @@
 package com.carriesCars.pricingEngine;
 
-class Mileage {
+final class Mileage {
     private int mileage;
 
     public Mileage(int mileage) {
