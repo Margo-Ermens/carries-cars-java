@@ -9,7 +9,7 @@ class Mileage {
 
     public Mileage increaseWith(int increaseWith)
     {
-        return null;
+        return new Mileage(mileage + increaseWith);
     }
 
     @Override
