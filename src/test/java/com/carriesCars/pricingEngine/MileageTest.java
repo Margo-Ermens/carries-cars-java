@@ -18,7 +18,6 @@ public class MileageTest {
         Mileage someMileage = new Mileage(aMileage);
         Mileage anotherIdenticalMileage = new Mileage(aMileage);
 
-        // Do you agree that this test should pass?
         assertEquals(someMileage, anotherIdenticalMileage);
     }
 }
