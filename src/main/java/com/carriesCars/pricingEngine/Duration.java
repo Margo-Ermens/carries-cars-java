@@ -39,7 +39,7 @@ public class Duration {
         return Objects.hash(durationInMinutes);
     }
 
-    public long durationInMinutes() {
+    public int durationInMinutes() {
         return this.durationInMinutes;
     }
 }
